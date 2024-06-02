@@ -1,4 +1,4 @@
-Feature: Upload file
+Feature: Insert data
 
   Background: Common step for scenario
     Given Setup base request specification

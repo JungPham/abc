@@ -1,4 +1,4 @@
-Feature: Upload file
+Feature: Tax relief
 
   Background: Common step for scenario
     Given User goes to Url

@@ -42,12 +42,15 @@ There are two ways to start tests.
 mvn clean install
 ```
 ## Check report generation
-Run from terminal with command:
+1. Allure report: Run from terminal with command:
 ```
 allure serve target/allure-results/
 ```
 Report will look like this
 ![img_2.png](img_2.png)
+
+2. After running, the cucumber report under html files are created in target folder, just open it via browser.
+![img_1.png](img_1.png)
 
 ## 3. More details about framework
 ### 3.1. Folder structure
@@ -102,6 +105,3 @@ More details testcase in `UploadFile.feature`
 ```
 Note: I disabled step validate tax relief amount and will enable it once bugs are fixed - I added this like TODO with comment
 ```
-
-## 5. Points to be considered for improvement
-- Separate API automation framework and UI automation framework and link them through microservices (this makes framework easy to scale up in the future)

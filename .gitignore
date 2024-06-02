@@ -24,6 +24,7 @@ hs_err_pid*
 
 # IDE's file
 .idea
+.DS_Store
 
 # Maven
 target/
@@ -31,3 +32,6 @@ dist/
 
 # Package files
 *.jar
+
+# Report
+allure-results/

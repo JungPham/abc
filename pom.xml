@@ -22,6 +22,7 @@
         <suiteXmlFile>${oppenheimerProjectSuite.suite}</suiteXmlFile>
         <jackson-databind.version>2.12.5</jackson-databind.version>
         <rest-assured.version>4.4.0</rest-assured.version>
+        <cucumber-reporting>4.2.3</cucumber-reporting>
     </properties>
     <dependencies>
         <dependency>
@@ -77,6 +78,11 @@
             <artifactId>rest-assured</artifactId>
             <version>${rest-assured.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${cucumber-reporting}</version>
         </dependency>
     </dependencies>
     <build>
