@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>testng-cucumber</td>
+            <td>01 Jun 2024, 20:08</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">common.steps.CommonSteps.assertResponseStatusCode(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="12000000">0.012</td>
+              <td class="duration" data-value="12000000">0.023</td>
+              <td class="duration" data-value="24000000">0.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">common.steps.CommonSteps.checkIfIsPresentInResponseBody(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="2000000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">common.steps.CommonSteps.setUserCredentials()</td>
+              <td>5</td>
+              <td class="duration" data-value="24000000">0.024</td>
+              <td class="duration" data-value="24000000">0.113</td>
+              <td class="duration" data-value="120000000">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">common.steps.CommonSteps.setupPreemptiveAuthSpec()</td>
+              <td>5</td>
+              <td class="duration" data-value="106200000">0.106</td>
+              <td class="duration" data-value="106200000">0.527</td>
+              <td class="duration" data-value="531000000">0.531</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">common.steps.CommonSteps.userGoesToUrl()</td>
+              <td>3</td>
+              <td class="duration" data-value="1224000000">1.224</td>
+              <td class="duration" data-value="1224000000">1.252</td>
+              <td class="duration" data-value="3672000000">3.672</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.clickOnBrowseAndUploadCSVFile()</td>
+              <td>2</td>
+              <td class="duration" data-value="81500000">0.081</td>
+              <td class="duration" data-value="81500000">0.082</td>
+              <td class="duration" data-value="163000000">0.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.clickOnDispenseNowButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="356000000">0.356</td>
+              <td class="duration" data-value="356000000">0.356</td>
+              <td class="duration" data-value="356000000">0.356</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.clickOnRefreshTaxReliefTableButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="duration" data-value="160000000">0.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyButtonIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="115000000">0.115</td>
+              <td class="duration" data-value="115000000">0.115</td>
+              <td class="duration" data-value="115000000">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyColorOfButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="duration" data-value="69000000">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyNatIdWorkingClassHeroIsDisplayedCorrectlyOnUI()</td>
+              <td>1</td>
+              <td class="duration" data-value="315000000">0.315</td>
+              <td class="duration" data-value="315000000">0.315</td>
+              <td class="duration" data-value="315000000">0.315</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyReliefWorkingClassHeroIsDisplayedCorrectlyOnUI()</td>
+              <td>1</td>
+              <td class="duration" data-value="281000000">0.281</td>
+              <td class="duration" data-value="281000000">0.281</td>
+              <td class="duration" data-value="281000000">0.281</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyTextIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="duration" data-value="81000000">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.HomeSteps.verifyUrlOfLoginPage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="duration" data-value="9000000">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.InsertMultipleSteps.sendPostRequestToInsertMultipleSteps()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.InsertSteps.sendPostRequestToInsert()</td>
+              <td>1</td>
+              <td class="duration" data-value="421000000">0.421</td>
+              <td class="duration" data-value="421000000">0.421</td>
+              <td class="duration" data-value="421000000">0.421</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.RakeDatabaseSteps.cleanDatabase()</td>
+              <td>5</td>
+              <td class="duration" data-value="244200000">0.244</td>
+              <td class="duration" data-value="244200000">1.137</td>
+              <td class="duration" data-value="1221000000">1.221</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.TaxReliefSteps.sendGetRequestToGetTaxRelief()</td>
+              <td>3</td>
+              <td class="duration" data-value="41666666">0.041</td>
+              <td class="duration" data-value="41666666">0.065</td>
+              <td class="duration" data-value="125000000">0.125</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.TaxReliefSteps.verifyNatidFieldCorrectlyDisplayed(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="duration" data-value="7000000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.TaxReliefSteps.verifyRecordInserted(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="4000000">0.004</td>
+              <td class="duration" data-value="4000000">0.007</td>
+              <td class="duration" data-value="8000000">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">oppenheimerProject.steps.TaxReliefSteps.verifyTaxReliefAmount()</td>
+              <td>1</td>
+              <td class="duration" data-value="5000000">0.005</td>
+              <td class="duration" data-value="5000000">0.005</td>
+              <td class="duration" data-value="5000000">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">utils.DriverConfiguration.afterTest()</td>
+              <td>3</td>
+              <td class="duration" data-value="145666666">0.145</td>
+              <td class="duration" data-value="145666666">0.153</td>
+              <td class="duration" data-value="437000000">0.437</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">utils.DriverConfiguration.configuration()</td>
+              <td>3</td>
+              <td class="duration" data-value="1918333333">1.918</td>
+              <td class="duration" data-value="1918333333">1.988</td>
+              <td class="duration" data-value="5755000000">5.755</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>23</td>
+            <td>47</td>
+            <td class="duration">0.295</td>
+            <td class="duration">5.755</td>
+            <td class="duration">13.910</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
